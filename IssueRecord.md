@@ -40,5 +40,5 @@ https://github.com/NVIDIA/TensorRT/issues/380
 parse_known_args()
 parse_args()
 # give undefined param cause this error, 
-# use parse_known_args replace parse_args() can solve
+# use parse_known_args() replace parse_args() can solve
 ```
