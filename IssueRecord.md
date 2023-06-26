@@ -8,6 +8,15 @@
 # 检查输出的维度是否正确（申请内存小了）
 ```
 
+```python
+# python api input data
+# input memory must contigous
+data = np.zeros((1, 3, 640, 640), dtype=np.float32)
+print(data.flags)
+data = np.ascontiguousarray(arr)  # 使内存存储为行连续(C)(转置等一些操作会使之成为列连续(F))，然后在送入trt-infer
+print(data.flags)
+```
+
 ```shell
 /usr/bin/ld: warning: libblas.so.3, needed by //usr/lib/libarmadillo.so.8, not found (try using -rpath or -rpath-link)
 /usr/bin/ld: warning: liblapack.so.3, needed by //usr/lib/libarmadillo.so.8, not found (try using -rpath or -rpath-link)
