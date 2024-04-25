@@ -51,3 +51,9 @@ parse_args()
 # give undefined param cause this error, 
 # use parse_known_args() replace parse_args() can solve
 ```
+
+```python
+pytorch1.8.0  
+torch.onnx.export(model, x,...)  model.forward() return val(list/tuple) include None cause segmention error  
+pytorch1.12.0 run pass  
+```
